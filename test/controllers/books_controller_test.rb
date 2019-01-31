@@ -12,7 +12,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
 
   test "should create book" do
     assert_difference('Book.count') do
-      post books_url, params: { book: { author: @book.author, isbn: @book.isbn, langage: @book.langage, price: @book.price, title: @book.title, year: @book.year } }, as: :json
+      post books_url, params: { book: { author: @book.author, isbn: @book.isbn, language: @book.language, price: @book.price, title: @book.title, year: @book.year } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class BooksControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update book" do
-    patch book_url(@book), params: { book: { author: @book.author, isbn: @book.isbn, langage: @book.langage, price: @book.price, title: @book.title, year: @book.year } }, as: :json
+    patch book_url(@book), params: { book: { author: @book.author, isbn: @book.isbn, language: @book.language, price: @book.price, title: @book.title, year: @book.year } }, as: :json
     assert_response 200
   end
 
